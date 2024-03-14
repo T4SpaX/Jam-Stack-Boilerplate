@@ -18,8 +18,12 @@ const config: StorybookConfig = {
     options: {}
   },
   docs: {
-    autodocs: 'tag'
+    autodocs:true
   },
-  staticDirs: ['../public']
+  staticDirs: ['../public'],
+  webpackFinal:(config) =>{
+    config.resolve?.modules?.push(`${process.cwd()}/}`)
+    return config
+  },
 }
 export default config
