@@ -9,24 +9,28 @@
     "lint": "next lint",
     "prepare": "husky",
     "test": "jest --passWithNoTests --maxWorkers=50%",
-    "test:wacht": "jest --wacht --maxWorkers=25%",
+    "test:watch": "jest --watchAll --maxWorkers=25% --all",
     "test:ci": "jest --runInBand",
     "eject": "next eject",
+    "generate":"npx --no plop --plopfile generators/plopfile.js",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
   },
   "dependencies": {
+    "jest-styled-components": "^7.2.0",
     "next": "14.1.0",
     "react": "^18",
     "react-dom": "^18",
     "styled-components": "^6.1.8"
   },
   "devDependencies": {
+    "@babel/preset-typescript": "^7.23.3",
     "@chromatic-com/storybook": "^1.2.19",
     "@storybook/addon-essentials": "^8.0.0",
     "@storybook/addon-interactions": "^8.0.0",
     "@storybook/addon-links": "^8.0.0",
     "@storybook/addon-onboarding": "^8.0.0",
+    "@storybook/addon-themes": "^8.0.0",
     "@storybook/blocks": "^8.0.0",
     "@storybook/nextjs": "^8.0.0",
     "@storybook/react": "^8.0.0",
@@ -44,10 +48,11 @@
     "eslint-plugin-react": "^7.34.0",
     "eslint-plugin-storybook": "^0.8.0",
     "husky": "^9.0.11",
+    "jest": "^29.7.0",
     "jest-environment-jsdom": "^29.7.0",
+    "plop": "^4.0.1",
     "prettier": "3.2.5",
     "storybook": "^8.0.0",
-    "tailwindcss": "^3.3.0",
     "typescript": "^5"
   }
 }

@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import StyledComponentsRegistry from '@/lib/registry'
+import StyledComponentsRegistry from '@/src/lib/registry'
 
 
 export const metadata: Metadata = {
